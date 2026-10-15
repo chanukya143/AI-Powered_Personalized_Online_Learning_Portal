@@ -9,6 +9,10 @@ dist/
 # Java & Maven
 target/
 *.class
+backend/data/
+data/
+*.mv.db
+*.lock.db
 .mvn/wrapper/maven-wrapper.jar
 .idea/
 *.iml
