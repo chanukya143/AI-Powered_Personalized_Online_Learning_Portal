@@ -85,7 +85,7 @@ flowchart LR
 5. Configure Environment Variables:
    | Key | Value |
    |---|---|
-   | `VITE_API_BASE_URL` | `https://edupulse-api.onrender.com/api` |
+   | `VITE_API_BASE_URL` | `https://ai-powered-personalized-online-learning.onrender.com/api` |
 6. Single Page Application Routing Verification:
    * Ensure `frontend/vercel.json` contains:
      ```json
