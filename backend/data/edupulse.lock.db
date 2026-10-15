@@ -1,0 +1,6 @@
+#FileLock
+#Thu Oct 15 07:31:15 UTC 2026
+hostName=CKR_HUB
+id=1a13e78ec9ba3db4fb31d01dd4ade624c1213da4ffb
+method=file
+server=192.168.0.2\:50246
