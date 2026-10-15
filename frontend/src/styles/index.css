@@ -1,0 +1,127 @@
+@import './theme.css';
+
+/* ==========================================================================
+   GLOBAL UTILITIES & NEUMORPHIC COMPONENT STYLES
+   ========================================================================== */
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 0.5rem 0;
+  color: var(--neo-text);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+p {
+  margin: 0 0 1rem 0;
+  color: var(--neo-text-secondary);
+}
+
+a {
+  color: var(--neo-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--neo-primary-hover);
+}
+
+/* Raised & Inset Surface Utilities */
+.neo-surface {
+  background: var(--neo-surface);
+  box-shadow: var(--neo-raised);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.neo-surface-sm {
+  background: var(--neo-surface);
+  box-shadow: var(--neo-raised-sm);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.neo-inset {
+  background: var(--neo-surface);
+  box-shadow: var(--neo-inset);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(163, 177, 198, 0.2);
+}
+
+/* Badges & Tags */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius-full);
+  box-shadow: var(--neo-raised-sm);
+  background: var(--neo-surface);
+}
+
+.badge-primary {
+  color: var(--neo-primary);
+  border: 1px solid rgba(91, 103, 241, 0.25);
+}
+
+.badge-secondary {
+  color: var(--neo-secondary);
+  border: 1px solid rgba(22, 166, 161, 0.25);
+}
+
+.badge-success {
+  color: var(--neo-success);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.badge-warning {
+  color: var(--neo-warning);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.grid-cols-1 { display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 1.5rem; }
+.grid-cols-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+.grid-cols-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+.grid-cols-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; }
+
+@media (max-width: 1024px) {
+  .grid-cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid-cols-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 768px) {
+  .grid-cols-4, .grid-cols-3, .grid-cols-2 { grid-template-columns: 1fr; }
+  .container { padding: 0 1rem; }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.animate-pulse {
+  animation: pulseGlow 2s infinite ease-in-out;
+}
